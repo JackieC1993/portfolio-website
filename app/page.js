@@ -2,9 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import Footer from "./footer";
-import  GoogleGenerativeAI from "@google/generative-ai";
+// import  GoogleGenerativeAI from "@google/generative-ai";
 
-
+// const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/generate`;
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [messageInput, setMessageInput] = useState("");
@@ -343,55 +343,6 @@ export default function Home() {
             <a href="#" className="bento-item">
               <img src="./imgs/game.png" alt="Game" width="100%" />
             </a>
-          </div>
-        </section>
-        <section className="chatbot container">
-          <h2>
-            <small>Talk to me</small>
-            Chatbot
-          </h2>
-          <div className="chatbot-blue">
-            <div className="chat-info">
-              <h3>Gemini AI Chatbot</h3>
-              <p>
-                I've put together a chatbot here which knows all my skills, work
-                experience and has a copy of my CV/Resume. You can use it to ask
-                questions about me to get a better idea of who I am and what
-                I've done.
-              </p>
-              <p>
-                You can also download my resume here if you want to take a look
-                at it. I'm currently looking for new opportunities so if you
-                have a project you think I'd be a good fit for, please get in
-                touch!
-              </p>
-              <a href="./imgs/Resume_Jackie Cheung.pdf" className="button black">
-                Download Resume
-              </a>
-            </div>
-            <div className="chat-box">
-              <div className="scroll-area">
-                <ul id="chat-log">
-                  {messages.map((message, index) => (
-                    <li key={index} className={`${message.role}`}>
-                      <span className={`avatar`}>
-                        {message.role === "user" ? "You" : "AI"}
-                      </span>
-                      <div className="message">{message.content}</div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <form onSubmit={submitForm} className="chat-message">
-                <input
-                  type="text"
-                  placeholder="Hey Jackie, what skills are you best at?"
-                  value={messageInput}
-                  onChange={(e) => setMessageInput(e.target.value)}
-                />
-                <button className="button black">Send</button>
-              </form>
-            </div>
           </div>
         </section>
       </main>
