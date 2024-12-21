@@ -233,12 +233,6 @@ export default function Home() {
                 functionality and creativity. Join me as I combine my interests
                 in coding and technology to create innovative solutions!
               </p>
-              <p>
-                I'm currently working on a project that uses Azure AI to create
-                a chatbot that can help answer questions about web development.
-                I'm also working on a project that uses React and Next.js to
-                create a portfolio website design that looks good.
-              </p>
             </div>
           </div>
         </section>
